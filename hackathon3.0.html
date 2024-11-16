@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hackathon 3.0 - Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Add some effects to the input boxes */
+    input, textarea {
+      transition: all 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 10px #38b2ac;
+      border-color: #38b2ac;
+    }
+    /* Glowy box effect */
+    .glassy-box {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 py-4 px-6 shadow-md sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-green-400 text-xl font-bold">Hackathon Valley</a>
+      <div class="block md:hidden">
+        <button id="nav-toggle" class="text-green-400 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+      <ul id="nav-menu" class="hidden md:flex space-x-6">
+        <li><a href="index.html#home" class="hover:text-green-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-green-400">About</a></li>
+        <li><a href="hackathon-info.html" class="hover:text-green-400">Upcoming Hackathon</a></li>
+        <li><a href="index.html#previous" class="hover:text-green-400">Previous Hackathon</a></li>
+        <li><a href="register.html" class="hover:text-green-400">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Registration Form -->
+  <main class="py-12">
+    <section class="py-12 bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-green-400 text-center mb-8">Register for Hackathon 3.0</h2>
+        
+        <!-- Rules and Payment Instructions -->
+        <div class="glassy-box p-8 rounded-lg shadow-lg mb-8">
+          <h3 class="text-2xl font-bold text-green-400 mb-4">Hackathon Rules</h3>
+          <ul class="list-disc list-inside text-gray-300 mb-4">
+            <li>Maximum 3 members per team.</li>
+            <li>No cheating or plagiarism.</li>
+            <li>All submissions must be original work.</li>
+            <li>Follow the hackathon schedule strictly.</li>
+            <li>Respect all participants and organizers.</li>
+          </ul>
+          <h3 class="text-2xl font-bold text-green-400 mb-4">Payment Instructions</h3>
+          <p class="text-gray-300 mb-4">Please send the registration fee to the following number:</p>
+          <p class="text-gray-300 font-bold mb-4">bKash/Nagad: 01716100149</p>
+          <p class="text-gray-300">After sending the payment, please provide your bKash/Nagad number and the transaction ID (TrxID) in the form below.</p>
+        </div>
+
+        <form action="https://formspree.io/f/xanyjraw" method="POST" class="glassy-box p-8 rounded-lg shadow-lg">
+          <!-- Team Information -->
+          <div class="mb-4">
+            <label for="team-name" class="block text-gray-300 mb-2">Team Name</label>
+            <input type="text" id="team-name" name="team-name" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          
+          <!-- Team Leader Information -->
+          <h3 class="text-xl font-bold text-green-400 mb-2">Team Leader</h3>
+          <div class="mb-4">
+            <label for="team-leader-name" class="block text-gray-300 mb-2">Name</label>
+            <input type="text" id="team-leader-name" name="team-leader-name" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          <div class="mb-4">
+            <label for="team-leader-phone" class="block text-gray-300 mb-2">Phone</label>
+            <input type="tel" id="team-leader-phone" name="team-leader-phone" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          <div class="mb-4">
+            <label for="team-leader-email" class="block text-gray-300 mb-2">Email</label>
+            <input type="email" id="team-leader-email" name="team-leader-email" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          
+          <!-- Team Member 1 Information -->
+          <h3 class="text-xl font-bold text-green-400 mb-2">Team Member 1</h3>
+          <div class="mb-4">
+            <label for="team-member-1-name" class="block text-gray-300 mb-2">Name</label>
+            <input type="text" id="team-member-1-name" name="team-member-1-name" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          <div class="mb-4">
+            <label for="team-member-1-phone" class="block text-gray-300 mb-2">Phone</label>
+            <input type="tel" id="team-member-1-phone" name="team-member-1-phone" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          <div class="mb-4">
+            <label for="team-member-1-email" class="block text-gray-300 mb-2">Email</label>
+            <input type="email" id="team-member-1-email" name="team-member-1-email" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          
+          <!-- Team Member 2 Information -->
+          <h3 class="text-xl font-bold text-green-400 mb-2">Team Member 2</h3>
+          <div class="mb-4">
+            <label for="team-member-2-name" class="block text-gray-300 mb-2">Name</label>
+            <input type="text" id="team-member-2-name" name="team-member-2-name" class="w-full p-2 rounded bg-gray-800 text-white">
+          </div>
+          <div class="mb-4">
+            <label for="team-member-2-phone" class="block text-gray-300 mb-2">Phone</label>
+            <input type="tel" id="team-member-2-phone" name="team-member-2-phone" class="w-full p-2 rounded bg-gray-800 text-white">
+          </div>
+          <div class="mb-4">
+            <label for="team-member-2-email" class="block text-gray-300 mb-2">Email</label>
+            <input type="email" id="team-member-2-email" name="team-member-2-email" class="w-full p-2 rounded bg-gray-800 text-white">
+          </div>
+          
+          <!-- Payment Information -->
+          <div class="mb-4">
+            <label for="bkash-number" class="block text-gray-300 mb-2">bKash/Nagad Number</label>
+            <input type="tel" id="bkash-number" name="bkash-number" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          <div class="mb-4">
+            <label for="trxid" class="block text-gray-300 mb-2">Transaction ID (TrxID)</label>
+            <input type="text" id="trxid" name="trxid" class="w-full p-2 rounded bg-gray-800 text-white" required>
+          </div>
+          
+          <!-- Additional Information -->
+          <div class="mb-4">
+            <label for="additional-info" class="block text-gray-300 mb-2">Additional Information</label>
+            <textarea id="additional-info" name="additional-info" class="w-full p-2 rounded bg-gray-800 text-white" rows="4"></textarea>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="w-full py-2 bg-green-500 text-black font-semibold rounded-lg shadow hover:bg-green-400">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-black text-center">
+    <p class="text-gray-500">© 2024 Hackathon Valley. All rights reserved.<br>Contact us: info@hackathonvalley.com</p>
+  </footer>
+
+  <script>
+    // Toggle navigation menu on mobile
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      var navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

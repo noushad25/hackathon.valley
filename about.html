@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Hackathon Valley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Styling for the photo container */
+    .photo-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      perspective: 1000px; /* For 3D effect */
+    }
+
+    .photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+    }
+
+    .photo-container:hover .photo {
+      transform: rotateY(180deg); /* Flip the photo */
+    }
+
+    .photo-front,
+    .photo-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .photo-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-back {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+
+    .photo-back p {
+      margin: 0.2rem 0;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 py-4 px-6 shadow-md sticky top-0 z-10">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-green-400 text-xl font-bold">Hackathon Valley</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html#home" class="hover:text-green-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-green-400">About</a></li>
+        <li><a href="index.html#upcoming" class="hover:text-green-400">Upcoming Hackathon</a></li>
+        <li><a href="index.html#previous" class="hover:text-green-400">Previous Hackathon</a></li>
+        <li><a href="index.html#register" class="hover:text-green-400">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="py-12">
+    <!-- Meet the Team Section -->
+    <section class="py-12 bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-green-400 text-center mb-8">Meet the Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Team Member 1 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <!-- Front Side -->
+                <div class="photo-front">
+                  <img src="me.jpg" alt="Md Noushad Jahan Ramim">
+                </div>
+                <!-- Back Side -->
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Md Noushad Jahan Ramim</p>
+                  <p><strong>Age:</strong> 25</p>
+                  <p><strong>Academic:</strong> B.Sc in Computer Science</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Md Noushad Jahan Ramim</h3>
+            <p class="text-gray-400">Founder & CEO</p>
+          </div>
+
+          <!-- Team Member 2 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="8d766f6d-fa18-468c-8292-4f9fe6e3ed0b.jpg" alt="Md Yasin Hossain Akash">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Md Yasin Hossain Akash</p>
+                  <p><strong>Age:</strong> 24</p>
+                  <p><strong>Academic:</strong> B.Sc in Software Engineering</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Md Yasin Hossain Akash</h3>
+            <p class="text-gray-400">Founder & Chief Strategy Officer (CSO)</p>
+          </div>
+
+          <!-- Team Member 3 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="jetu.jpg" alt="Kazi Jamil Jetu">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Kazi Jamil Jetu</p>
+                  <p><strong>Age:</strong> 26</p>
+                  <p><strong>Academic:</strong> B.Sc in Information Technology</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Kazi Jamil Jetu</h3>
+            <p class="text-gray-400">Co-Founder & Chief Operating Officer (COO)</p>
+          </div>
+
+          <!-- Team Member 4 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="turag.jpg" alt="Nafis Iqbal Turag">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Nafis Iqbal Turag</p>
+                  <p><strong>Age:</strong> 23</p>
+                  <p><strong>Academic:</strong> B.Sc in Electrical Engineering</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Nafis Iqbal Turag</h3>
+            <p class="text-gray-400">Co Founder & Chief Technology Officer (CTO)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section class="py-12 bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-green-400 text-center mb-8">Our Organizers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Organizer 1 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="shadman1.jpg" alt="Shadman Sarwar">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Shadman Sarwar</p>
+                  <p><strong>Age:</strong> 22</p>
+                  <p><strong>Academic:</strong> B.Sc in Computer Science</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Shadman Sarwar</h3>
+            <p class="text-gray-400">Organizer & Event Coordinator</p>
+          </div>
+
+          <!-- Organizer 2 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="pritha.jpeg" alt="Labiba Akram Pritha">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Labiba Akram Pritha</p>
+                  <p><strong>Age:</strong> 21</p>
+                  <p><strong>Academic:</strong> BBA in Marketing</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Labiba Akram Pritha</h3>
+            <p class="text-gray-400">Organizer & Marketing Lead</p>
+          </div>
+
+          <!-- Organizer 3 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="roshni.jpg" alt="Afia Mahmud Roshni">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Afia Mahmud Roshni</p>
+                  <p><strong>Age:</strong> 22</p>
+                  <p><strong>Academic:</strong> B.Sc in Psychology</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Afia Mahmud Roshni</h3>
+            <p class="text-gray-400">Organizer & Community Engagement Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Judges Section -->
+    <section class="py-12 bg-gray-800">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-green-400 text-center mb-8">Our Judges</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Judge 1 -->
+          <div class="text-center">
+            <div class="photo-container">
+              <div class="photo">
+                <div class="photo-front">
+                  <img src="atik.jpg" alt="Atik Hasan">
+                </div>
+                <div class="photo-back">
+                  <p><strong>Name:</strong> Atik Hasan</p>
+                  <p><strong>Age:</strong> 30</p>
+                  <p><strong>Academic:</strong> M.Sc in Computer Science</p>
+                  <p><strong>Nationality:</strong> Bangladeshi</p>
+                  <p><strong>Religion:</strong> Islam</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white mt-4">Atik Hasan</h3>
+            <p class="text-gray-400">Judge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-black text-center">
+    <p class="text-gray-500">© 2024 Hackathon Valley. All rights reserved.<br>Contact us: info@hackathonvalley.com</p>
+  </footer>
+
+</body>
+</html>
